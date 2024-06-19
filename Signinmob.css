@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+html{
+    overflow: hidden;
+}
+
+.navbar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top:0;
+}
+
+.logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    /* transform: translateX(-300px); */
+    margin-right: 130%;
+    width:20%;
+    border:3px solid white;
+    border-radius: 50px;
+}
+
+.nav-list{
+    width: 70%;
+    display: flex;
+}
+
+.nav-list li{
+    list-style: none;
+    padding: 16px 40px;
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    font-family: 'Ubuntu',sans-serif;
+
+}
+
+.rightnav{
+    
+    width:30%;
+    padding: 0 23px; 
+    text-align:right;
+}
+
+#home{
+    text-decoration: none;
+    color:white;
+}
+#about{
+    text-decoration: none;
+    color:white;
+}
+#services{
+    text-decoration: none;
+    color:white;
+}
+#contact{
+    text-decoration: none;
+    color:white;
+}
+
+
+.background{
+    background: rgba(0,0,0,0.7) url('friend.jpeg');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 15px;
+}
+
+.line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 5px 3px;
+}
+
+.form-popup{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    max-width: 720px;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    border-color: #c01717;
+    border: 2px solid #de2929;
+    transform: translate(-50%,-50%);
+}
+
+.form-box{
+    display: flex;
+}
+
+.form-details{
+    max-width: 330px;
+}
+
+.form-box .form-details{
+    max-width: 330px;
+    width: 100%;
+    background: #717171;
+    display: flex;
+    padding: 0 20px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-box .form-content{
+    width: 100%;
+    padding: 35px;
+}
+.form-content img{
+    width:30%;
+    margin-left: 38%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+form .input-field{
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+form .input-field input{
+    width: 100%;
+    height:100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 0.95rem;
+    border-radius: 3px;
+    border: 1px solid #717171;
+}
+
+.input-field input:focus{
+    border-color: orange;
+}
+
+.input-field input:is(:focus, :valid){
+    padding: 10px 15px 0;
+}
+form .input-field label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #717171;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ label {
+    color: orange;
+    font-size: 0.75rem;
+    transform: translateY(-120%);
+
+}
+
+.form-box a{
+    color: orange;
+    text-decoration: none;
+}
+
+.form-box a:hover{
+    text-decoration: underline;
+}
+.form-box :where(.forgot-pass, .policy-text){
+    display: inline-flex;
+    margin-top: 14px;
+    font-size: 0.95rem;
+
+}
+form button{
+    width:100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px ;
+    border-radius: 50px;
+    margin: 25px 0;
+    color: #fff;
+    cursor: pointer;
+    background:orange ;
+    transition: 0.2s ease;
+}
+form button:hover{
+    background: orange;
+}
+.form-box .bottom-link{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1244px){
+    .nav-list{
+        flex-direction: row;
+    }
+    .logo{
+        width: 1000px;
+    }
+    .rightnav{
+        text-align: center;
+    }
+    .h-nav-resp{
+        height: 72px;
+    }
+    .box-main{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+
+    .section{
+        flex-direction: column-reverse;
+    }
+    .text-small{
+        text-align:center;
+    }
+    .buttons{
+        text-align:center;
+    }
+    .text-big{
+        text-align:center;
+    }
+}

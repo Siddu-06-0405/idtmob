@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homemob.css">
+</head>
+<body>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const navbar = document.querySelector('.navbar');
+            const navList = document.querySelector('.nav-list');
+            let rightNav = document.querySelector('.rightnav'); // Define rightNav here
+
+            burger.addEventListener('click', () => {
+                console.log('Burger menu clicked');
+                console.log('rightNav:', rightNav);
+                console.log('navList:', navList);
+                console.log('navbar:', navbar);
+                navbar.classList.toggle('h-nav-resp');
+                navList.classList.toggle('v-class-resp');
+    });
+});
+
+    </script>
+    
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <div class="logo"><img src="water-recycle-vector-icon.jpg" alt="logo"></div>
+            <li><a href="#sources" id="about">Sources</a></li>
+            <li><a href="#services1" id="services">Services</a></li>
+            <li><a href="#contact-us" id="contact">Contact</a></li>
+            <li><a href="create.html" id="about" style="white-space: nowrap;">Sign-in/Sign-up</a></li>
+        </ul> 
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <section>
+        <center>
+            <h1 style="margin-top: 5vh;">Connecting Industries for a Sustainable Future</h1>
+        </center><br>
+        <h2 id="subhead"> ~Trade, Reuse, and Conserve Water Efficiently</h2><br>
+        <h2>How It Works</h2><br>
+        <ul>
+            <li>Step 1: Register your industry (Provider or Seeker)</li>
+            <li>Step 2: Post or Find Available Water</li>
+            <li>Step 3: Connect and Trade</li>
+        </ul><br>
+        <h2>Benefits</h2><br>
+        <ul>
+            <li>Save costs</li>
+            <li>Promote sustainability</li>
+            <li>Ensure water security</li>
+        </ul><br>
+        <h2>Testimonials</h2><br>
+        <ul id="sources">
+            <li>"Our company saved 30% on water costs thanks to this platform!" – Industry A</li>
+            <li>"A fantastic initiative for environmental sustainability!" – Industry B</li>
+        </ul>
+        <h1>Industries That Generate Wastewater</h1>
+        <ul>
+            <li>
+                <h2>Food and Beverage Industry</h2>
+                <ul>
+                    <li>Generates wastewater with organic materials, nutrients, and some chemicals.</li>
+                    <li>Common sources: breweries, dairies, meat processing plants, and food packaging.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Textile and Dyeing Industry</h2>
+                <ul>
+                    <li>Produces wastewater with dyes, chemicals, and organic pollutants.</li>
+                    <li>Common sources: textile manufacturing and processing plants.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Chemical Manufacturing</h2>
+                <ul>
+                    <li>Generates wastewater containing various chemicals, solvents, and by-products.</li>
+                    <li>Common sources: pharmaceuticals, agrochemicals, and specialty chemicals.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Paper and Pulp Industry</h2>
+                <ul>
+                    <li>Produces wastewater with high organic content, chlorine, and other chemicals.</li>
+                    <li>Common sources: paper mills and pulp processing plants.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Mining and Mineral Processing</h2>
+                <ul>
+                    <li>Generates wastewater containing heavy metals, chemicals, and suspended solids.</li>
+                    <li>Common sources: mining operations and ore processing plants.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Petrochemical and Refining</h2>
+                <ul>
+                    <li>Produces wastewater with hydrocarbons, heavy metals, and other pollutants.</li>
+                    <li>Common sources: oil refineries and petrochemical plants.</li>
+                </ul>
+            </li>
+        </ul>
+        <h1>Industries That Can Use Treated Wastewater</h1>
+        <ul>
+            <li>
+                <h2>Agriculture</h2>
+                <ul>
+                    <li>Requires water for irrigation and can use treated wastewater with organic content.</li>
+                    <li>Can utilize wastewater from food and beverage, and textile industries.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Construction</h2>
+                <ul>
+                    <li>Needs water for mixing concrete, dust suppression, and site cleaning.</li>
+                    <li>Can use treated wastewater from chemical manufacturing and mining industries.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Manufacturing</h2>
+                <ul>
+                    <li>Uses water for cooling, processing, and cleaning.</li>
+                    <li>Can use treated wastewater from the textile, paper, and pulp industries.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Power Generation</h2>
+                <ul>
+                    <li>Requires water for cooling towers and boilers.</li>
+                    <li>Can utilize treated wastewater from petrochemical, refining, and chemical manufacturing.</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Industrial Cleaning</h2>
+                <ul>
+                    <li>Needs water for cleaning equipment, facilities, and vehicles.</li>
+                    <li>Can use treated wastewater from various industries like food and beverage, and textile.</li>
+                </ul>
+            </li>
+        </ul>
+        <h1 id="services1">Services</h1><br><br>
+        <button class="btn"><a href="listing.html">Listing</a></button>
+        <button class="btn"><a href="buying.html">Buying</a></button><br><br>
+        <hr>
+        <div id="contact-us" class="line-1">
+            <section class="contact">
+                <div>
+                    <div class="finalflex">
+                        <div class="form">
+                            <h2 class="text-center">Contact Us</h2>
+                            <div>
+                                <input class="form-input" type="text" name="name" id="name" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <input class="form-input" type="text" name="phone" id="phone" placeholder="Enter your phone">
+                            </div>
+                            <div>
+                                <input class="form-input" type="email" name="email" id="email" placeholder="Enter your email">
+                            </div>
+                            <textarea class="form-input" name="text" id="text" cols="23" rows="" placeholder="Elaborate your concern"></textarea>
+                            <div>
+                                <button style="color: #fff; padding: 10px 30px;">Submit</button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="social">
+                                <div class="social-item">
+                                    <img src="instagram.png" alt="Instagram">
+                                    <div class="social-text">Instagram</div>
+                                </div>
+                                <div class="social-item">
+                                    <img src="twitter.png" alt="Twitter">
+                                    <div class="social-text">Twitter</div>
+                                </div>
+                                <div class="social-item">
+                                    <img src="discord.png" alt="Discord">
+                                    <div class="social-text">Discord</div>
+                                </div>
+                                <div class="social-item">
+                                    <img src="linkedin.png" alt="LinkedIn">
+                                    <div class="social-text">Linkedin</div>
+                                </div>
+                                <h2>Social media</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+</html>
